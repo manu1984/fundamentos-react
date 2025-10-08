@@ -4,7 +4,10 @@ import Primeiro from './components/basicos/Primeiro'
 import ComParametro from './components/basicos/ComParametro'
 import Fragmento from './components/basicos/Fragmento'
 import Card from "./components/layout/Card";
-import Aleatorio from './components/basicos/Aleatorio'
+import Familia from "./components/basicos/Familia";
+import FamiliaMembro from "./components/basicos/FamiliaMembro";
+import Aleatorio from './components/basicos/Aleatorio';
+import ListaAlunos from "./components/repeticao/ListaAlunos";
 
 export default function App(props){
     return(
@@ -12,6 +15,18 @@ export default function App(props){
        <h1>Fundamentos React</h1>
 
         <div className="Cards">
+        <Card titulo="Repeticao" color="#FF4C65">
+            <ListaAlunos />
+        </Card>
+
+
+        <Card titulo="Componente com Filhos" color="#0000FF">
+            <Familia sobrenome="Ferreira">
+               <FamiliaMembro nome="Pedro" />
+               <FamiliaMembro nome="Ana" />
+               <FamiliaMembro nome="Gustavo" /> 
+            </Familia>
+        </Card>    
 
         <Card titulo="Desafio Aleatorio" color="#6CF527">
             <Aleatorio min={1} max={60} />
